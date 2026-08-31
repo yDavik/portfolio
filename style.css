@@ -1,0 +1,38 @@
+ * {
+    margin: 0px;
+    padding: 10px;
+}
+/*CSS vem aqui em baixo*/
+
+header {
+    position: fixed;
+    width: 75%;
+    background-color: rgb(153, 153, 156);
+   
+}
+
+body {
+   margin: 0px;
+   padding: 10px;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+body a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+}
+body a:hover {
+    text-decoration: underline;
+    color: blueviolet;
+    font-weight: bold;  
+
+}
+
+footer{
+
+    background-color: rgb(144, 231, 231);
+}
