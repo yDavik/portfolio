@@ -1,8 +1,9 @@
  * {
-    margin: 0px;
-    padding: 10px;
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
 }
-/*CSS vem aqui em baixo*/
+
 
 header {
     position: fixed;
@@ -34,7 +35,7 @@ body a:hover {
 
 footer{
 
-    background-color: rgb(221, 255, 253);
+    background-color: rgb(192, 197, 197);
 }
 
 .icone {
@@ -50,4 +51,69 @@ footer ul {
     display: flex;
     justify-content: space-around;
     list-style-type: none;
+}
+
+.icone1 {
+    fill: rgb(0, 0, 0);
+    stroke: rgb(236, 230, 230);
+    stroke-width: 10px;
+    width: 40px;
+    height: 50px;
+
+}
+
+.linksIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgb(243, 239, 239);
+}
+
+
+.linksIcon1{
+
+     display: flex;
+     align-items: center;
+     gap: 20px;
+     flex-direction: row;
+    
+}
+
+#sobre { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-direction: row;
+}
+
+#sobre > div:first-child {
+    flex: 1;
+}
+
+#habilidades{ 
+    padding: 50px;
+    text-align: center;
+
+}
+
+.habilidades-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.habilidade {
+   
+    width: 300px;
+    padding: 30px;
+    text-align: center;
+}
+
+´.habilidade ul {
+    padding: 0%;
+    list-style-position: inside;
 }
