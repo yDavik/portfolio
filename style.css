@@ -1,31 +1,37 @@
  * {
-    margin: 5px;
-    padding: 5px;
+    
     box-sizing: border-box;
-}
-
-
-header {
-    position: fixed;
-    width: 75%;
-    background-color: rgb(153, 153, 156);
-   
 }
 
 body {
    margin: 0px;
    padding: 10px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+
+header {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    background-color: rgb(153, 153, 156);
+    z-index: 1000;
+   
 }
 
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
+main {
+     padding-top: 70px;
+}
+
 
 body a {
     text-transform: uppercase;
     text-decoration: none;
     color: black;
 }
+
+
 body a:hover {
     text-decoration: underline;
     color: blueviolet;
@@ -33,10 +39,58 @@ body a:hover {
 
 }
 
+
+#sobre { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-direction: row;
+}
+
+#sobre > div:first-child {
+    flex: 1;
+}
+
+#habilidades{ 
+    padding: 50px;
+    text-align: center;
+
+}
+
+
+.habilidades-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.habilidade {
+   
+    width: 300px;
+    padding: 30px;
+    text-align: center;
+}
+
+.habilidade ul {
+    padding: 0%;
+    list-style-position: inside;
+}
+
+
 footer{
 
     background-color: rgb(192, 197, 197);
 }
+
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
 
 .icone {
     fill: rgb(64, 7, 90);
@@ -47,11 +101,6 @@ footer{
 
 }
 
-footer ul {
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-}
 
 .icone1 {
     fill: rgb(0, 0, 0);
@@ -78,42 +127,4 @@ footer ul {
      gap: 20px;
      flex-direction: row;
     
-}
-
-#sobre { 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-    flex-direction: row;
-}
-
-#sobre > div:first-child {
-    flex: 1;
-}
-
-#habilidades{ 
-    padding: 50px;
-    text-align: center;
-
-}
-
-.habilidades-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    flex-wrap: wrap;
-}
-
-.habilidade {
-   
-    width: 300px;
-    padding: 30px;
-    text-align: center;
-}
-
-´.habilidade ul {
-    padding: 0%;
-    list-style-position: inside;
 }
