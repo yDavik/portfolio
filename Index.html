@@ -3,131 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Davi Moura
-    </title>
+    <meta name="description" content="Portfólio de Davi Clementino de Moura, estudante de Técnico em Informática para a Internet.">
+    <title>Davi Moura | Portfólio</title>
     <link rel="icon" href="assets/images.jpg">
-    <link rel="stylesheet" href="style.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <a href="#Apresentação">Apresentação</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#habilidades">habilidades</a>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="topo">
+        <a class="topo__nome" href="#apresentacao">Davi Moura</a>
+        <nav class="topo__menu" aria-label="Principal">
+            <a href="#sobre">Sobre</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#contato">Contato</a>
+        </nav>
     </header>
 
-   <main>
+    <main id="conteudo">
 
-    <section id="Apresentação">
-        <h3>Apresentação</h3>
-        <h1>Davi Clementino de Moura</h1>
-        <h2>Estudante de Desenvolvimento web</h2>
-        
+        <section id="apresentacao" class="apresentacao">
+            <div class="apresentacao__texto">
+                <p class="apresentacao__ola">Olá, eu sou</p>
+                <h1>Davi Clementino de Moura</h1>
+                <p class="apresentacao__cargo">
+                    Estudante de desenvolvimento web, aprendendo a transformar ideias em sites que funcionam.
+                </p>
 
-       <img src="assets/images.jpg" alt="Foto de Davi Clementino de Moura" width="100px">
-    </section>
+                <div class="apresentacao__acoes">
+                    <a class="botao botao--principal" href="https://github.com/yDavik" target="_blank" rel="noopener noreferrer">Ver meu GitHub</a>
+                    <a class="botao" href="mailto:daviclementino51@gmail.com">Enviar e-mail</a>
+                </div>
+            </div>
 
-        <section id="sobre">
-            <div>
-            <h3>Sobre</h3>
-        <p>Sou estudante de Tecnico em Informatica para a Internet, com foco no Desenvolvimento de sistemas
-            e na área da programação.<br></p>
-          
-       <p>  Estou desenvolvendo meus conhecimentos em HTML, CSS, JavaScript e outras tecnologias 
-       voltadas para o desenvolvimento web.<br> </P>
-        
-         <p>Atualmente, trabalho no Pão de Açucar, onde atuo como caixa e empacotador. <br>
-            Durante minha experiência, também tive a oportunidade de auxiliar em diferentes setores, como mercearia, açougue e padaria. <br>
+            <img class="apresentacao__foto" src="assets/images.jpg" alt="Foto de Davi Clementino de Moura" width="240" height="240">
+        </section>
 
-         </p>
-           </div>
+        <section id="sobre" class="sobre">
+            <h2>Sobre</h2>
 
+            <div class="sobre__conteudo">
+                <p>
+                    Estudo Técnico em Informática para a Internet, com foco em desenvolvimento de sistemas e programação.
+                </p>
+                <p>
+                    Estou aprofundando meus conhecimentos em HTML, CSS, JavaScript e outras tecnologias voltadas ao desenvolvimento web.
+                </p>
+                <p>
+                    Hoje trabalho no Pão de Açúcar, como caixa e empacotador, e já ajudei em outros setores, como mercearia, açougue e padaria.
+                    Essa rotina de atendimento ao público me ensinou a ter responsabilidade, me organizar e trabalhar em equipe.
+                </p>
+            </div>
+        </section>
 
+        <section id="habilidades" class="habilidades">
+            <h2>Habilidades</h2>
 
-         <div class="linksIcon1">
+            <div class="habilidades__grupos">
+                <div class="habilidades__grupo">
+                    <h3>Técnicas</h3>
+                    <ul class="chips">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
 
+                <div class="habilidades__grupo">
+                    <h3>Comportamentais</h3>
+                    <ul class="chips">
+                        <li>Responsabilidade</li>
+                        <li>Trabalho em equipe</li>
+                        <li>Organização</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-            <a href="https://github.com/yDavik" target="_blank">
-          
-                <svg class="icone"> <use href="assets/github.svg"></use></svg>
+    </main>
+
+    <footer id="contato" class="rodape">
+        <div class="rodape__texto">
+            <h2>Vamos conversar?</h2>
+            <p>Me chame pelo e-mail ou pelas redes.</p>
+        </div>
+
+        <ul class="rodape__links">
+            <li>
+                <a href="https://github.com/yDavik" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg class="icone" aria-hidden="true"><use href="assets/github.svg"></use></svg>
                 </a>
-
-              <a href="https://www.linkedin.com/in/davi-moura-772485244/"target="_blank">
-                  <svg class="icone"> <use href="assets/linkedin.svg"></use></svg>
-
-           </a>
-            
-    
-        </div>
-
-        </section>
-
-       
-           
-           <section id="habilidades">
-            <h2>habilidades</h2>
-
-      <div class="habilidades-container">
-
-        <div class="habilidade">
-            <h4>Hard Skills</h4>
-
-        <ul>
-           <li>HTML</li>
-           <li>CSS</li>
-           <li>JavaScript</li>
-           </ul>
-      </div>
-
-       <div class="habilidade">
-            <h4>Soft Skills</h4>
-         <ul>
-            <li>Responsabilidade </li>
-               <li>Trabalho em Equipe</li>
-               <li>Organização</li>
-           
-         </ul>
-        </div>
-      </div>    
-        </section>
-        
-
-
-</main>
-  <footer>
-    <div>
-        <h5>Davi Moura</h5>
-        <p>Esse é o meu site</p>
-        <h5>Seguir</h5>
-    </div>
-
-   <div class="linksIcon">
-        
-        <ul>
-            <li><a href="https://github.com/yDavik" target="_blank">
-            <svg class="icone"> <use href="assets/github.svg"></use></svg>
-            </a></li>
-
-              <li><a href="https://www.linkedin.com/in/davi-moura-772485244/"target="_blank">
-                  <svg class="icone"> <use href="assets/linkedin.svg"></use></svg>
-                  </a></li>
-
-
-             <li>
-        <a href="mailto:daviclementino51@gmail.com">
-            <svg class="icone1">
-                <use href="assets/gmail1.svg"></use>
-            </svg>
-        </a>
-    </li>
-        
-
-            
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/davi-moura-772485244/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg class="icone" aria-hidden="true"><use href="assets/linkedin.svg"></use></svg>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:daviclementino51@gmail.com" aria-label="Enviar e-mail">
+                    <svg class="icone" aria-hidden="true"><use href="assets/gmail1.svg"></use></svg>
+                </a>
+            </li>
         </ul>
-    </div>
-  </footer>
-  </body>
-  
 
+        <p class="rodape__copy">&copy; 2026 Davi Moura</p>
+    </footer>
+</body>
 </html>

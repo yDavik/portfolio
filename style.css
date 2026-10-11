@@ -1,130 +1,335 @@
- * {
-    
+/* ---------- Variáveis (mude as cores aqui e o site inteiro muda) ---------- */
+:root {
+    --fundo: #f6f8fc;
+    --tinta: #14213d;
+    --texto: #3a4660;
+    --destaque: #2f5bea;
+    --destaque-escuro: #1f43bd;
+    --suave: #e3e9f8;
+    --linha: #d3dbee;
+
+    --fonte-titulo: "Bricolage Grotesque", Verdana, Geneva, sans-serif;
+    --fonte-texto: "Figtree", Verdana, Geneva, sans-serif;
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
-body {
-   margin: 0px;
-   padding: 10px;
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
+html {
+    scroll-padding-top: 80px; /* o menu fixo não cobre o título da seção */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
     }
+}
 
+body {
+    margin: 0;
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: var(--fonte-texto);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+}
 
-header {
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    background-color: rgb(153, 153, 156);
+h1,
+h2,
+h3 {
+    margin: 0;
+    color: var(--tinta);
+    font-family: var(--fonte-titulo);
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+p {
+    margin: 0 0 1rem;
+    max-width: 62ch;
+}
+
+a {
+    color: var(--destaque-escuro);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+a:hover {
+    color: var(--destaque);
+}
+
+a:focus-visible {
+    outline: 3px solid var(--destaque);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Link para quem navega pelo teclado */
+.pular {
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+    padding: 0.5rem 1rem;
+    background: var(--tinta);
+    color: #fff;
+    z-index: 2000;
+}
+
+.pular:focus {
+    top: 1rem;
+}
+
+/* ---------- Topo ---------- */
+.topo {
+    position: sticky;
+    top: 0;
     z-index: 1000;
-   
-}
-
-main {
-     padding-top: 70px;
-}
-
-
-body a {
-    text-transform: uppercase;
-    text-decoration: none;
-    color: black;
-}
-
-
-body a:hover {
-    text-decoration: underline;
-    color: blueviolet;
-    font-weight: bold;  
-
-}
-
-
-#sobre { 
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 50px;
-    flex-direction: row;
+    gap: 0.5rem 1.5rem;
+    padding: 0.9rem clamp(1.25rem, 5vw, 4rem);
+    background-color: var(--fundo);
+    border-bottom: 1px solid var(--linha);
 }
 
-#sobre > div:first-child {
-    flex: 1;
+.topo__nome {
+    color: var(--tinta);
+    font-family: var(--fonte-titulo);
+    font-size: 1.25rem;
+    font-weight: 800;
+    text-decoration: none;
 }
 
-#habilidades{ 
-    padding: 50px;
-    text-align: center;
-
-}
-
-
-.habilidades-container {
+.topo__menu {
     display: flex;
-    justify-content: center;
+    gap: 1.5rem;
+}
+
+.topo__menu a {
+    color: var(--tinta);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.topo__menu a:hover {
+    color: var(--destaque);
+    text-decoration: underline;
+}
+
+/* ---------- Seções ---------- */
+main > section {
+    width: min(100% - 2.5rem, 62rem);
+    margin-inline: auto;
+}
+
+.sobre,
+.habilidades {
+    padding-block: clamp(3rem, 8vw, 5.5rem);
+    border-top: 1px solid var(--linha);
+}
+
+/* ---------- Apresentação ---------- */
+.apresentacao {
+    display: grid;
+    grid-template-columns: 1fr auto;
     align-items: center;
-    gap: 50px;
+    gap: 2.5rem;
+    padding-block: clamp(3rem, 9vw, 6.5rem);
+}
+
+.apresentacao__ola {
+    margin-bottom: 0.5rem;
+    color: var(--destaque-escuro);
+    font-weight: 600;
+}
+
+.apresentacao h1 {
+    font-size: clamp(2.5rem, 7vw, 4.75rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.apresentacao__cargo {
+    margin-top: 1.25rem;
+    font-size: 1.25rem;
+    max-width: 34ch;
+}
+
+.apresentacao__acoes {
+    display: flex;
     flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.75rem;
 }
 
-.habilidade {
-   
-    width: 300px;
-    padding: 30px;
-    text-align: center;
+.apresentacao__foto {
+    width: clamp(150px, 22vw, 240px);
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--fundo);
+    box-shadow: 10px 10px 0 var(--destaque);
 }
 
-.habilidade ul {
-    padding: 0%;
-    list-style-position: inside;
+/* ---------- Botões ---------- */
+.botao {
+    display: inline-block;
+    padding: 0.75rem 1.4rem;
+    border: 2px solid var(--tinta);
+    border-radius: 8px;
+    color: var(--tinta);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
 }
 
-
-footer{
-
-    background-color: rgb(192, 197, 197);
+.botao:hover {
+    background-color: var(--tinta);
+    color: #fff;
 }
 
-footer ul {
+.botao--principal {
+    background-color: var(--destaque);
+    border-color: var(--destaque);
+    color: #fff;
+}
+
+.botao--principal:hover {
+    background-color: var(--destaque-escuro);
+    border-color: var(--destaque-escuro);
+}
+
+/* ---------- Sobre ---------- */
+.sobre {
+    display: grid;
+    grid-template-columns: minmax(8rem, 1fr) 3fr;
+    gap: 2rem;
+}
+
+/* ---------- Habilidades ---------- */
+.habilidades__grupos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.habilidades {
+    display: block;
+}
+
+.habilidades__grupo h3 {
+    margin-bottom: 1rem;
+}
+
+.chips {
     display: flex;
-    justify-content: space-around;
-    list-style-type: none;
+    flex-wrap: wrap;
+    gap: 0.6rem;
 }
 
+.chips li {
+    padding: 0.4rem 1rem;
+    background-color: var(--suave);
+    border-radius: 999px;
+    color: var(--tinta);
+    font-weight: 500;
+}
 
+/* ---------- Rodapé ---------- */
+.rodape {
+    display: grid;
+    gap: 1.5rem;
+    justify-items: start;
+    padding: clamp(2.5rem, 7vw, 4.5rem) clamp(1.25rem, 5vw, 4rem) 1.5rem;
+    background-color: var(--tinta);
+    color: #c9d2ea;
+}
+
+.rodape h2 {
+    color: #fff;
+}
+
+.rodape p {
+    margin: 0.5rem 0 0;
+}
+
+.rodape__links {
+    display: flex;
+    gap: 1rem;
+}
+
+.rodape__links a {
+    display: grid;
+    place-items: center;
+    width: 3.25rem;
+    height: 3.25rem;
+    border: 2px solid #44547f;
+    border-radius: 50%;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.rodape__links a:hover {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.rodape__copy {
+    margin: 1rem 0 0;
+    font-size: 0.9rem;
+    color: #8f9bbd;
+}
+
+/* ---------- Ícones (SVG da pasta assets) ---------- */
 .icone {
-    fill: rgb(64, 7, 90);
-    stroke: white;
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: #fff;
+    stroke: var(--tinta);
     stroke-width: 10px;
-    width: 50px;
-    height: 50px;
-
 }
 
-
-.icone1 {
-    fill: rgb(0, 0, 0);
-    stroke: rgb(236, 230, 230);
-    stroke-width: 10px;
-    width: 40px;
-    height: 50px;
-
+.rodape__links a:hover .icone {
+    fill: var(--tinta);
+    stroke: #fff;
 }
 
-.linksIcon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background-color: rgb(243, 239, 239);
-}
+/* ---------- Celular ---------- */
+@media (max-width: 40rem) {
+    .apresentacao {
+        grid-template-columns: 1fr;
+    }
 
+    .apresentacao__foto {
+        order: -1;
+        box-shadow: 6px 6px 0 var(--destaque);
+    }
 
-.linksIcon1{
-
-     display: flex;
-     align-items: center;
-     gap: 20px;
-     flex-direction: row;
-    
+    .sobre {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 }
